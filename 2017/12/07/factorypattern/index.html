@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="Delia&#39;s Blog">
 <meta property="og:description" content="昨天写代码的时候发现大多代码都一样，只有类型不一样，当时脑海里就冒出“工厂模式”的概念，但又说不清到底什么是工厂模式，我所遇到的情况又到底适不适合使用工厂模式，于是花时间好好把工厂模式看了一下，想通过这篇文章来输出我所看到和get到的内容。 我比较喜欢旅游，就拿旅游产品来举例子吧。">
 <meta property="og:locale" content="zh-cmn-Hans">
-<meta property="og:updated_time" content="2017-12-08T12:29:06.000Z">
+<meta property="og:updated_time" content="2017-12-08T14:04:37.001Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="聊聊工厂模式">
 <meta name="twitter:description" content="昨天写代码的时候发现大多代码都一样，只有类型不一样，当时脑海里就冒出“工厂模式”的概念，但又说不清到底什么是工厂模式，我所遇到的情况又到底适不适合使用工厂模式，于是花时间好好把工厂模式看了一下，想通过这篇文章来输出我所看到和get到的内容。 我比较喜欢旅游，就拿旅游产品来举例子吧。">
@@ -230,7 +230,7 @@ var _hmt = _hmt || [];
 <li>抽象工厂模式可以解决多个商家多个产品的问题</li>
 </ul>
 <p>Q&amp;A环节<br>Q：上面的代码中都是使用接口来表示抽象产品或者抽象工厂，可以改成用抽象类吗？<br>（这个问题翻译一下，其实就是抽象类和接口的区别）<br>A：就本实例中的接口而言，完全可以使用抽象类替换。但不是说抽象类和接口就是等价的，不然为什么会同时存在呢？存在即合理嘛，一般对象的抽象偏向使用抽象类，行为的抽象偏向使用接口。抽象类中除了有无需实现的抽象方法，也可以有具体实现的方法；而接口中只能有无实现的方法。一个类只能继承一个父类，但可以继承多个接口，所以我们在使用接口的时候有更好的扩展性，这大概就是编程原则中有一条是针对接口编程，而不是针对类编程吧。</p>
-<p>源码地址：</p>
+<p>源码地址：<a href="https://github.com/deliazhi/factorypattern" target="_blank" rel="external">https://github.com/deliazhi/factorypattern</a></p>
 <p>差不多就这些了。</p>
 <p>说些题外话，最近看到身边的同事小伙伴们在自己坚持不懈地努力下，慢慢成长和蜕变成更加优秀的样子，有时候我常常想，如果我一开始认识此刻的TA，大概都不敢和TA交朋友吧。没有谁天生就是优秀的，每个优秀的人背后都付出了旁人难以想象和无法看到的努力和坚持。也许我还是对自己要求太低了，由于种种原因放松了对自我成长的要求，看着自己与伙伴越来越大的差距，既羞愧又紧张，也有不少压力，也许是我还没放弃自己吧，如果要自己立刻和如此优秀的他们比，也许我连重新上路的勇气都没有，所以就和昨天的自己比吧。其实这篇文章昨天就能完成的，但我还是拖延到今天才完成，不过好在今天完成了，说明比昨天的我优秀了一点点，哈哈，只能这么安慰自己了，加油吧！</p>
 
@@ -515,15 +515,15 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">旅行</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">设计模式</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">工厂模式</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">旅行</a>
               </li>
              
               <li class="article-tag-list-item">
