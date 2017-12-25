@@ -17,7 +17,7 @@
 <meta property="og:description" content="还记得之前介绍工厂模式之抽象工厂吗？当时，我们是获取两家OTA的国内游线路列表，代码如下：123456789Console.WriteLine(&amp;quot;=========抽象工厂模式==========&amp;quot;);ITravelFactory tc_factory = new TC_Factory();ITravelFactory xc_factory = new XC_Factory()">
 <meta property="og:locale" content="zh-cmn-Hans">
 <meta property="og:image" content="http://deliazhi.com/img/UML示意图.png">
-<meta property="og:updated_time" content="2017-12-25T15:12:56.000Z">
+<meta property="og:updated_time" content="2017-12-25T15:29:54.143Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="DI and Ioc">
 <meta name="twitter:description" content="还记得之前介绍工厂模式之抽象工厂吗？当时，我们是获取两家OTA的国内游线路列表，代码如下：123456789Console.WriteLine(&amp;quot;=========抽象工厂模式==========&amp;quot;);ITravelFactory tc_factory = new TC_Factory();ITravelFactory xc_factory = new XC_Factory()">
@@ -219,7 +219,7 @@ var _hmt = _hmt || [];
 <p>需要注意的是，这个ContainerBuilder对象只可以被build一次，所以在build之前要把所有你要用到的组件都注册进去哦~<br>step5:从容器里面获取实例<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">var domesticContainer=container.Resolve&lt;SetterInjection.DomesticTravel&gt;();</div><div class="line">var outboundContainer = container.Resolve&lt;SetterInjection.OutboundTravel&gt;();</div><div class="line">var cruiseContainer = container.Resolve&lt;SetterInjection.CruiseTravel&gt;();</div></pre></td></tr></table></figure></p>
 <p>注册是Register开头，获取是Resole开头。<br>step6:调用实例的具体方法<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">Console.WriteLine(domesticContainer.GetLineList()); </div><div class="line">Console.WriteLine(outboundContainer.GetLineList()); </div><div class="line">Console.WriteLine(cruiseContainer.GetLineList());</div></pre></td></tr></table></figure></p>
 <p>这是一个特别特别简单的Autofac的demo，通过这个小demo我可以简单的掌握Autofac的工作原理，但更多关于Autofac的细节还需要我今天更多更深入的了解才行。这篇文章就不展开了，以后有机会可以单独成文，另行介绍。</p>
-<p>好了，这篇文章就到这里了，就到这里。</p>
+<p>好了，这篇文章就到这里了，就到这里。<br>本文源代码：<a href="https://github.com/deliazhi/DIandIocDemo" target="_blank" rel="external">https://github.com/deliazhi/DIandIocDemo</a></p>
 <p>参考文章：</p>
 <p>[1] 张洋,<a href="http://www.cnblogs.com/leoo2sk/archive/2009/06/17/di-and-ioc.html" target="_blank" rel="external">依赖注入那些事儿</a></p>
 <p>[2] 刘皓,<a href="http://www.cnblogs.com/liuhaorain/p/3747470.html" target="_blank" rel="external">深入理解DIP、IoC、DI以及IoC容器</a></p>
@@ -502,11 +502,11 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">故事</a>
+                <a href="javascript:void(0)" class="js-tag color3">计划</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">计划</a>
+                <a href="javascript:void(0)" class="js-tag color3">故事</a>
               </li>
              
               <li class="article-tag-list-item">
