@@ -165,6 +165,97 @@ var _hmt = _hmt || [];
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-cut-out-string" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/10/25/cut-out-string/">字符串截取</a>
+    </h1>
+  
+
+        
+        <a href="/2015/10/25/cut-out-string/" class="archive-article-date">
+  	<time datetime="2015-10-25T05:58:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2015-10-25</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="JavaScript截取字符串的方法"><a href="#JavaScript截取字符串的方法" class="headerlink" title="JavaScript截取字符串的方法"></a>JavaScript截取字符串的方法</h3><h4 id="substr-start-length"><a href="#substr-start-length" class="headerlink" title="substr(start,length)"></a>substr(start,length)</h4><p>start：必需。必须是数值。如果是负数，从尾部开始截取。</p>
+<p>length：可选。截取长度。必须是数值。如果省略了该参数，则截取到字符串结尾。</p>
+<p>栗子：</p>
+<pre><code>
+var str = 'abcdefghij';
+console.log('(1, 2): '   + str.substr(1, 2));   // '(1, 2): bc'
+console.log('(-3, 2): '  + str.substr(-3, 2));  // '(-3, 2): hi'
+console.log('(-3): '     + str.substr(-3));     // '(-3): hij'
+console.log('(1): '      + str.substr(1));      // '(1): bcdefghij'
+console.log('(-20, 2): ' + str.substr(-20, 2)); // '(-20, 2): ab'
+console.log('(20, 2): '  + str.substr(20, 2));  // '(20, 2): '
+</code></pre>
+
+<p>Tips：</p>
+<p>1.如果length小于等于0，不管起始位置的值是什么，都返回空字符串；</p>
+<p>2.索引从0开始。</p>
+        
+          <a class="article-more-a" href="/2015/10/25/cut-out-string/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">学习积累</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2015/10/25/cut-out-string/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-JSON-dui-xiang-he-JSON-zi-fu-chuan-zhi-jian-de-zhuan-huan" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -890,86 +981,6 @@ var _hmt = _hmt || [];
 
 
   
-    <article id="post-FIBONACCI" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/04/22/FIBONACCI/">计算fibonacci数列的三种方法</a>
-    </h1>
-  
-
-        
-        <a href="/2015/04/22/FIBONACCI/" class="archive-article-date">
-  	<time datetime="2015-04-22T14:29:12.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2015-04-22</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>　　《编写高质量代码 改善JavaScript程序的188个建议》之建议66：使用函数实现历史记录，从而避免在递归时，多次计算同一个数的fibonacci数列（例如，算fibonacci(10)=fibonacci(9)+fibonacci(8)，而之前在算fibonacci(9)时，fibonacci(8)已经算过了）。<br>JavaScript中的实现如下：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">var memoizer=function(memo,formula)&#123;</div><div class="line">	var recur=function(n)&#123;</div><div class="line">		var result=memo[n];</div><div class="line">		if(typeof result!==&apos;number&apos;)&#123;</div><div class="line">			result=formula(recur,n);</div><div class="line">			memo[n]=result;</div><div class="line">		&#125;</div><div class="line">		return result;</div><div class="line">	&#125;</div><div class="line">	return recur;</div><div class="line">&#125;;</div><div class="line">var fibonacci2=memoizer([0,1],function(recur,n)&#123;</div><div class="line">	return recur(n-1)+recur(n-2);</div><div class="line">&#125;)</div><div class="line"></div><div class="line">for(i=0;i&lt;=100;i++)&#123;</div><div class="line">	document.writeln(i+&quot;:&quot;+fibonacci2(i));</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>　　其实，说到fibonacci数列，第一个想到的就是递归：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">private double fibonacci1(int n)</div><div class="line">&#123;</div><div class="line">    return n&lt;2?n:fibonacci1(n-1)+fibonacci1(n-2);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>　　递归方法的时间复杂度是O(n^2)。<br>
-        
-          <a class="article-more-a" href="/2015/04/22/FIBONACCI/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">读书</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2015/04/22/FIBONACCI/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
     <nav id="page-nav">
       <a class="extend prev" rel="prev" href="/page/5/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/4/">4</a><a class="page-number" href="/page/5/">5</a><span class="page-number current">6</span><a class="page-number" href="/page/7/">7</a><a class="page-number" href="/page/8/">8</a><span class="space">&hellip;</span><a class="page-number" href="/page/11/">11</a><a class="extend next" rel="next" href="/page/7/">Next &raquo;</a>
@@ -1071,11 +1082,11 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">计划</a>
+                <a href="javascript:void(0)" class="js-tag color3">故事</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">故事</a>
+                <a href="javascript:void(0)" class="js-tag color3">计划</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1087,11 +1098,19 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">年鉴</a>
+                <a href="javascript:void(0)" class="js-tag color5">C#基础</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">C#基础</a>
+                <a href="javascript:void(0)" class="js-tag color3">DI</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Ioc</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">年鉴</a>
               </li>
              
               <li class="article-tag-list-item">

@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="Delia&#39;s Blog">
 <meta property="og:description" content="昨天写代码的时候发现大多代码都一样，只有类型不一样，当时脑海里就冒出“工厂模式”的概念，但又说不清到底什么是工厂模式，我所遇到的情况又到底适不适合使用工厂模式，于是花时间好好把工厂模式看了一下，想通过这篇文章来输出我所看到和get到的内容。 我比较喜欢旅游，就拿旅游产品来举例子吧。">
 <meta property="og:locale" content="zh-cmn-Hans">
-<meta property="og:updated_time" content="2017-12-08T14:04:37.001Z">
+<meta property="og:updated_time" content="2017-12-14T12:53:08.751Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="聊聊工厂模式">
 <meta name="twitter:description" content="昨天写代码的时候发现大多代码都一样，只有类型不一样，当时脑海里就冒出“工厂模式”的概念，但又说不清到底什么是工厂模式，我所遇到的情况又到底适不适合使用工厂模式，于是花时间好好把工厂模式看了一下，想通过这篇文章来输出我所看到和get到的内容。 我比较喜欢旅游，就拿旅游产品来举例子吧。">
@@ -237,6 +237,37 @@ var _hmt = _hmt || [];
       
 
       
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/img/common/alipay.jpg">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/img/common/wechat.jpg">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
     </div>
     <div class="article-info article-info-index">
       
@@ -324,6 +355,15 @@ var _hmt = _hmt || [];
   
 <nav id="article-nav">
   
+    <a href="/2017/12/21/DI-and-Ioc/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          DI and Ioc
+        
+      </div>
+    </a>
+  
   
     <a href="/2017/10/13/NET-Java/" id="article-nav-older" class="article-nav-link-wrap">
       <div class="article-nav-title">晨会分享主题之Java与.NET</div>
@@ -345,6 +385,19 @@ var _hmt = _hmt || [];
             </div>
         </div>
         
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#简单工厂"><span class="toc-number">1.</span> <span class="toc-text">简单工厂</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#利用反射实现的简单工厂模式"><span class="toc-number">2.</span> <span class="toc-text">利用反射实现的简单工厂模式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#工厂模式"><span class="toc-number">3.</span> <span class="toc-text">工厂模式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#抽象工厂"><span class="toc-number">4.</span> <span class="toc-text">抽象工厂</span></a></li></ol>
+                    </div>
+                </span>
+            </div>
+        </div>
         
     </div>
 </aside>
@@ -467,11 +520,11 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">计划</a>
+                <a href="javascript:void(0)" class="js-tag color3">故事</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">故事</a>
+                <a href="javascript:void(0)" class="js-tag color3">计划</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -483,11 +536,19 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">年鉴</a>
+                <a href="javascript:void(0)" class="js-tag color5">C#基础</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">C#基础</a>
+                <a href="javascript:void(0)" class="js-tag color3">DI</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Ioc</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">年鉴</a>
               </li>
              
               <li class="article-tag-list-item">
